@@ -7,6 +7,7 @@ public class InsertionSort {
         for (i=1; i<n; i++) {
             last = arr[i];
             j = i;
+            // chuyển các phần tử lớn hơn last về phía sau vị trí của dãy
             while ((j > 0) && (arr[j - 1] > last)) {
                 arr[j] = arr[j-1];
                 j=j-1;

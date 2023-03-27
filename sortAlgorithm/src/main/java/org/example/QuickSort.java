@@ -18,11 +18,14 @@ public class QuickSort {
 
             if (left >= right)
                 return;
-
+            // giá trị chốt có số thứ tự là middle
             int middle = left + (right - left) / 2;
             int pivot = arr[middle];
             int i = left, j = right;
 
+            //phân chia dãy ra bởi giá trị chốt
+            // bên trái là các giá trị bé hơn giá trị chốt
+            // bên phải là các giá trị lớn hơn giá trị chốt
             while (i <= j) {
                 while (arr[i] < pivot) {
                     i++;
@@ -41,9 +44,11 @@ public class QuickSort {
                 }
             }
 
+            // sắp xếp nửa bên trái
             if (left < j)
                 quickSort(arr, left, j);
 
+            // sắp xếp nửa bên phải
             if (right > i)
                 quickSort(arr, i, right);
         }
